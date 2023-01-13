@@ -1,0 +1,26 @@
+{
+  "name": "decryptkeystore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "keytoPk.js",
+  "scripts": {
+    "start": "node keytoPk.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/keythereum": "^1.2.1",
+    "dotenv": "^16.0.3",
+    "ethereumjs-wallet": "^1.0.2",
+    "fs": "^0.0.1-security",
+    "keythereum": "^1.2.0",
+    "lite-server": "^2.6.1",
+    "typescript": "^4.7.3"
+  },
+  "devDependencies": {
+    "@types/keythereum": "^1.2.1"
+  },
+  "type": "module",
+  "repository": "git@github.com:donghquinn/eth-decryptPrivateKey.git",
+  "packageManager": "yarn@3.3.1"
+}
