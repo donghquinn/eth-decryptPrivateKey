@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node keytoPk.js"
   },
-  "author": "",
+  "author": "Kim Dong Hyun",
   "license": "ISC",
   "dependencies": {
     "@types/keythereum": "^1.2.1",
