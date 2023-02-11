@@ -3,32 +3,39 @@ import Keythereum from 'keythereum';
 
 config();
 
-const { PASSWORD, ADDRESS, KEYSTORE_DIR } = process.env;
 
-// The address of which you want to decrypt keystore.
-const address = ADDRESS;
 
-// The directory where the keystore folder saved. - Should Be Save in "keystore" folder
-const dir = KEYSTORE_DIR;
+export async function decrypt() {
+    try {
+        const { PASSWORD, ADDRESS, KEYSTORE_DIR } = process.env;
 
-// phrase to unlock the address which you insert 
-const passphrase = PASSWORD;
+        // The address of which you want to decrypt keystore.
+        const address = ADDRESS;
 
-export async function decrypt(address, dir, passphrase) {
-    const keyObject = Keythereum.importFromFile(address, dir);
+        // The directory where the keystore folder saved. - Should Be Save in "keystore" folder
+        const dir = KEYSTORE_DIR;
 
-    console.log("key object ok");
+        // phrase to unlock the address which you insert 
+        const passphrase = PASSWORD;
 
-    const privateKey = await Keythereum.recover(passphrase, keyObject);
+        const keyObject = Keythereum.importFromFile(address, dir);
 
-    console.log("privateKey ok")
+        console.log("key object ok");
 
-    // Print out the decryptized Keystore -> privateKey
-    const result = privateKey.toString('hex');
+        const privateKey = await Keythereum.recover(passphrase, keyObject);
 
-    console.log("Derived Private Key: %o", result);
+        console.log("privateKey ok")
 
-    return result;
+        // Print out the decryptized Keystore -> privateKey
+        const result = privateKey.toString('hex');
+
+        console.log("Derived Private Key: %o", result);
+
+        return result;
+    } catch (error) {
+        throw new Error(`Error: ${error}`);
+    }
+
 }
 
-await decrypt(address, dir, passphrase);
+await decrypt();
