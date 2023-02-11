@@ -3,12 +3,10 @@ import Keythereum from 'keythereum';
 
 config();
 
-
+const { PASSWORD, ADDRESS, KEYSTORE_DIR } = process.env;
 
 export async function decrypt() {
     try {
-        const { PASSWORD, ADDRESS, KEYSTORE_DIR } = process.env;
-
         // The address of which you want to decrypt keystore.
         const address = ADDRESS;
 
