@@ -8,6 +8,8 @@ Step1. make folder name "keystore". Then move JSON format pk file into this fold
 
 Step2. Assign the Actual path where keystore folder exist to "KEYSTORE_DIR" env Var.
 
+- e.g. KEYSTORE_DIR=/Users/username/Desktop/ethTest/
+
 Step3. Assign the passphrase which you inserted when creating the address to "PASSWORD" env var.
 
 Step4. Assign the address (e.g. 0x2032923~~) to "ADDRESS" env var. Then Run the code.
