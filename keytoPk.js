@@ -31,6 +31,8 @@ export async function decrypt() {
 
         return result;
     } catch (error) {
+        console.log("Error: %o", { error });
+
         throw new Error(`Error: ${error}`);
     }
 
