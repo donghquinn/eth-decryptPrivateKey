@@ -6,7 +6,7 @@ This is the Package in order to import privateKey from JSON format file (Usually
 
 Step1. make folder name "keystore". Then move JSON format pk file into this folder.
 
-Step2. Assign the Actual path where keystore folder exist to "DATADIR" env Var.
+Step2. Assign the Actual path where keystore folder exist to "KEYSTORE_DIR" env Var.
 
 Step3. Assign the passphrase which you inserted when creating the address to "PASSWORD" env var.
 
@@ -20,11 +20,11 @@ You will get actual privateKey.
 
 keystore 폴더 안에 json 형식의 pk 파일을 담는다.
 
-datadir 에 keystore 폴더가 존재하는 경로를 입력한다.
+KEYSTORE_DIR 에 keystore 폴더가 존재하는 경로를 입력한다.
 
-address를 생성할 때 입력한 passphrase를 password에 입력한다.
+address를 생성할 때 입력한 passphrase를 PASSWORD 입력한다.
 
-해당 address 값을 입력하고서 코드를 실행시킨다.
+해당 address 값을 ADDRESS 입력하고서 코드를 실행시킨다.
 
 ## Env Explanation
 
